@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>步驟</title>
+<style type="text/css">
+.auto-style1 {
+	border: 1px solid #000000;
+}
+.auto-style2 {
+	border: 1px solid #000000;
+	background-image: url('webpractise/旁邊.jpg');
+}
+.auto-style3 {
+	font-family: "Adobe 繁黑體 Std B";
+}
+.auto-style4 {
+	font-family: "Adobe 繁黑體 Std B";
+	border: 1px solid #000000;
+}
+</style>
+</head>
+
+<body>
+
+<table class="auto-style2" style="width: 100%">
+	<tr>
+		<td class="auto-style4">步驟</td>
+		<td class="auto-style4">關鍵技術節點 /修改器</td>
+		<td class="auto-style4">具體操作說明</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">1. 準備模型</td>
+		<td class="auto-style4">Subdivision Surface</td>
+		<td class="auto-style1"><span class="auto-style3">按 </span>
+		<code data-index-in-node="2" data-path-to-node="5,1,2,0">
+		<span class="auto-style3">Ctrl + 2</span></code><span class="auto-style3"> 
+		套用細分表面，讓光影分佈更均勻平滑。</span></td>
+	</tr>
+	<tr>
+		<td class="auto-style4">2. 轉換光影</td>
+		<td class="auto-style4">Shader to RGB</td>
+		<td class="auto-style4">將 Eevee 的光影資訊轉換為可編輯的顏色數值。</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">3. 設定色彩階層</td>
+		<td class="auto-style4">Color Ramp</td>
+		<td class="auto-style4">將插值改為 
+		<b data-index-in-node="6" data-path-to-node="5,3,2,0">Constant</b>，手動調整滑桿來產生鮮明的明暗分割。</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">4. 調整色彩</td>
+		<td class="auto-style4">Hex Code Copy/Paste</td>
+		<td class="auto-style4">在 Color Ramp 中吸取顏色，調整亮度（Value）來製作漸層感。</td>
+	</tr>
+	<tr>
+		<td class="auto-style4">5. 製作描邊</td>
+		<td class="auto-style1">
+		<span class="auto-style3" data-path-to-node="5,5,1,0">
+		<b data-index-in-node="0" data-path-to-node="5,5,1,0">Solidify Modifier</b></span></td>
+		<td class="auto-style4">新增材質、調整 Offset 為 1，並勾選 
+		<b data-index-in-node="23" data-path-to-node="5,5,2,0">Flip Normals</b> 
+		來產生輪廓線。</td>
+	</tr>
+</table>
+
+</body>
+
+</html>
